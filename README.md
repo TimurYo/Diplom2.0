@@ -1,0 +1,1 @@
+## Diplom2.0 [[![Build status](https://ci.appveyor.com/api/projects/status/6cvfbgptl3eh02e1?svg=true)](https://ci.appveyor.com/project/TimurYo/diplom2-0)]
