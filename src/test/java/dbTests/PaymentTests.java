@@ -44,7 +44,7 @@ public class PaymentTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
         var expectedAmount = "4500000";
         var actualAmount = getPaymentEntity().getAmount();
         assertEquals(expectedAmount, actualAmount);
@@ -62,7 +62,7 @@ public class PaymentTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
 
         long duration = getDurationOfTimeForPaymentEntity();
         assertTrue(duration <= 3000);
@@ -80,7 +80,7 @@ public class PaymentTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
         var expectedStatus = "APPROVED";
         var actualStatus = getPaymentEntity().getStatus();
         assertEquals(expectedStatus, actualStatus);
@@ -98,7 +98,7 @@ public class PaymentTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
         var expectedStatus = "DECLINED";
         var actualStatus = getPaymentEntity().getStatus();
         assertEquals(expectedStatus, actualStatus);

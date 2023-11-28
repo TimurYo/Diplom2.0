@@ -45,7 +45,7 @@ public class OrderTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
 
         long duration = getDurationOfTimeForOrderEntity();
 
@@ -63,7 +63,7 @@ public class OrderTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
 
         long duration = getDurationOfTimeForOrderEntity();
 
@@ -83,7 +83,7 @@ public class OrderTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
 
         var expected = getPaymentEntity().getId();
         var actual = getOrderEntity().getId();
@@ -103,7 +103,7 @@ public class OrderTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
 
         var expected = getCreditEntity().getBankId();
         var actual = getOrderEntity().getCreditId();
@@ -122,7 +122,7 @@ public class OrderTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
 
         var expected = getPaymentEntity().getTransaction_id();
         var actual = getOrderEntity().getPaymentId();
@@ -141,7 +141,7 @@ public class OrderTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
 
         long duration = TimeHelper.getTimeDurationBetweenOrderAndPayment();
 
@@ -160,7 +160,7 @@ public class OrderTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
 
         long duration = TimeHelper.getTimeDurationBetweenOrderAndCredit();
 

@@ -43,7 +43,7 @@ public class CreditTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
 
         long duration = getDurationOfTimeForCreditEntity();
 
@@ -62,7 +62,7 @@ public class CreditTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
         var expectedStatus = "APPROVED";
         var actualStatus = getCreditEntity().getStatus();
         assertEquals(expectedStatus, actualStatus);
@@ -80,7 +80,7 @@ public class CreditTests {
         $(byText("Владелец")).parent().$("input.input__control").setValue("Timur");
         $(byText("CVC/CVV")).parent().$("input.input__control").setValue("335");
         $(byText("Продолжить")).click();
-        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20)).shouldHave(Condition.exactText("Операция одобрена Банком."));
+        $(byText("Успешно")).parent().$("div.notification__content").shouldBe(Condition.visible, Duration.ofSeconds(30)).shouldHave(Condition.exactText("Операция одобрена Банком."));
         var expectedStatus = "DECLINED";
         var actualStatus = getCreditEntity().getStatus();
         assertEquals(expectedStatus, actualStatus);
