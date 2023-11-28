@@ -33,7 +33,7 @@ out/
 
 ### Stuff ###
 .allure/
-node_modules/
+gate-simulator/node_modules/
 
 ### Exclusions ###
 HELP.md
