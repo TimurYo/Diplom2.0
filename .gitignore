@@ -1,11 +1,3 @@
-Thumbs.db*
-.DS_Store
-HELP.md
-.gradle
-build/
-.allure
-
-### STS ###
 .apt_generated
 .classpath
 .factorypath
@@ -39,9 +31,14 @@ out/
 *.tar.gz
 *.rar
 
+### Stuff ###
+.allure/
+node_modules/
+
 ### Exclusions ###
+HELP.md
+.gradle
+build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
-
-node_modules/
